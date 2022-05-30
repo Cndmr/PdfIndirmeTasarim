@@ -1,0 +1,96 @@
+<?php
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+ ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teknoloji</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+          crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap"
+          rel="stylesheet">
+          <script src="https://kit.fontawesome.com/d53c74239d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="social">
+        <font> <a href="index.html" style="text-decoration: none; color: white;"> Fi-Vi  |       <span>Exam Support...</span> </font></a>        <i class="fas fa-search"></i>
+        <a href="https://www.facebook.com/sinsi.attac" target="_blank">   <i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/cndmr.1/" target="_blank"><i class="fab fa-instagram"></i></a>              
+        <a href="https://twitter.com/Candmiir" target="_blank"> <i class="fab fa-twitter"></i></a>
+        <a href="https://www.google.com" target="_blank"> <i class="fab fa-google"></i></a>
+        <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+     
+     
+    </div>
+
+    <div id="container">
+        <header>
+            <img id="headerResim" src="img/banner.gif" alt="">
+        </header>
+        <section>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"> <i class="fas fa-home"></i> Anasayfa</a></li>
+                    <li><a href="hakkimizda2.html"><i class="fas fa-users"></i>Hakkımızda</a></li>
+                    <li><a href="kategoriler2.html"><i class="fas fa-asterisk"></i>Kategoriler</a></li>
+                    <li><a href="Galeri2.html"><i class="fas fa-images"></i>Galeri</a></li>
+                    <li><a href="iletisim1.html"><i class="fas fa-address-book"></i>İletişim</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <div class="icerik">
+
+                    <img src="img/java.jpg" alt="" class="rsm">
+                    <h5>Java</h5>
+                    <p class="icerikText">Java Programlama Dili</p>
+                    <a download href="pdfler/java.pdf" class="btnDevam">İndirmek İçin Tıklayınız...</a>
+
+                </div>
+                <div class="icerik">
+
+                    <img src="img/Python_1200x800.jpg" alt="" class="rsm">
+                    <h5>Pyhton</h5>
+                    <p class="icerikText">Pyhton</p>
+                    <a download href="pdfler/python.pdf" class="btnDevam">İndirmek İçin Tıklayınız...</a>
+
+                </div>
+                <div class="icerik">
+
+                    <img src="img/c++.jpg" alt="" class="rsm">
+                    <h5>C++</h5>
+                    <p class="icerikText">C++</p>
+                    <a download href="pdfler/c++.pdf" class="btnDevam">İndirmek İçin Tıklayınız...</a>
+
+                </div>
+               
+            </main>
+
+        </section>
+        <footer>Tüm Hakları Saklıdır &copy; | 2020</footer>
+    </div>
+</body>
+
+</html>
+<?php
+}else{
+     header("Location: index.php");
+     exit();
+}
+ ?>
